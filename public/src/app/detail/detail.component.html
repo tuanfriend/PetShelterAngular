@@ -1,0 +1,30 @@
+
+<!-- <h3>Pet Type: </h3> {{thispet.pettype}}
+<h3>Description: </h3> {{thispet.description}}
+<h3>skills: </h3> {{thispet.skill1}}<br>{{thispet.skill2}}<br>{{thispet.skill3}}
+<h3>Likes: {{thispet.like_count}}</h3>  -->
+
+<h2>Detail about {{thispet.name}}</h2>
+<table>
+    
+    <tr>
+        <th>Pet Type:</th>
+        <td>{{thispet.pettype}}</td>
+    </tr>
+    <tr>
+        <th>Description:</th>
+        <td>{{thispet.description}}</td>
+    </tr>
+    <tr>
+        <th>skills:</th>
+        <td>{{thispet.skill1}}<br>{{thispet.skill2}}<br>{{thispet.skill3}}</td>
+    </tr>
+    <tr>
+        <th>Like:</th>
+        <td>{{thispet.like_count}}</td>
+    </tr>
+    <tr>
+        <td><button *ngIf="thispet.showLike" (click)="onLike(thispet)">Like This Pet</button> </td>
+        <td><button (click)="onDelete(thispet._id)">Adopt This Pet</button> </td>
+    </tr>
+</table>
